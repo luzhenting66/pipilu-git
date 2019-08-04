@@ -11,6 +11,6 @@ public class HelloController {
     public String name(@PathVariable("name")String name){
 
         return "hello,welcome to git ...新建的分支：v.0.1.2"+name
-                +" 新加功能";
+                +" 新加功能 v0.1.2";
     }
 }
