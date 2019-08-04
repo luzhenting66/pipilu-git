@@ -8,6 +8,7 @@
 		<version>2.1.2.RELEASE</version>
 		<relativePath/>
 	</parent>
+	<packaging>war</packaging>
 	<groupId>com.pipilu</groupId>
 	<artifactId>pipilu-git</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -34,8 +35,27 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<!-- 如果不设置 fork:true ,那么不会 restart,devtools热部署不会起作用 -->
+					<fork>true</fork>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
