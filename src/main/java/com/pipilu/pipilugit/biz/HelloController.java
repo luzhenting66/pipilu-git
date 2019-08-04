@@ -11,6 +11,6 @@ public class HelloController {
     public String name(@PathVariable("name")String name){
 
         return "hello,welcome to git "+name
-                +" github pubKey ";
+                +" github  pubKey ";
     }
 }
