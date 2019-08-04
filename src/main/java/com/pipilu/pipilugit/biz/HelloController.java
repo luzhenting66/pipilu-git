@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @RequestMapping("/{name}")
     public String name(@PathVariable("name")String name){
-        return "hello,welcome to git ...新建的分支：v.0.1.1"+name;
+
+        return "hello,welcome to git ...新建的分支：v.0.1.2"+name
+                +" 新加功能";
     }
 }
